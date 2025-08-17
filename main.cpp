@@ -14,6 +14,7 @@ int main() {
         if (raining == 'y' || raining == 'Y') {
             cout << "Did you find an umbrella? (y/n): ";
             cin >> umbrella;
+ 
             if (umbrella == 'y' || umbrella == 'Y') {
                 cout << "Bring the umbrella." << endl;
                 programOn = false; // End program
@@ -22,7 +23,12 @@ int main() {
                 // Loop continues → check rain again
             }
         }
+        else {
+            cout << "It is not raining. No umbrella needed." << endl;
+            programOn = false; // End program
+        }
     }
+ 
     cout << "\nProgram Closed." << endl;
     return 0;
 }
